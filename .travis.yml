@@ -1,0 +1,15 @@
+language: generic
+
+sudo: required
+
+addons:
+  apt:
+    packages:
+      - cbp2make
+      - make
+      - cmake
+
+script:
+  - cbp2make -in TP_Archivos.cbp
+  - mv TP_Archivos.cbp.mak Makefile
+  - make
